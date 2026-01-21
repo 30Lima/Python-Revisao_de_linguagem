@@ -3,11 +3,13 @@
 
 idade_usuario = int(input("Digite a sua idade: "))
 
-if idade_usuario <= 12:
+if 0 < idade_usuario <= 12:
     print("Você é uma criança.")
 
-elif idade_usuario <= 18:
+elif 12 < idade_usuario < 18:
     print("Você é um adolescente.")
 
-else:
+elif idade_usuario > 18:
     print("Você é um adulto.")
+else:
+    print("Valor inválido")
