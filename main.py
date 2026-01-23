@@ -1,6 +1,7 @@
 import os
 
 def exibir_nome_do_programa():
+    os.system("cls")
     print("""
     ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
     ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -18,6 +19,15 @@ def exibir_opcoes():
     print('3. Ativar restaurante')
     print('4. Sair\n')
 
+def adicionar_restaurante():
+    os.system("cls")
+    print("Cadastro de novos restaurantes\n")
+    nome_restaurante = input("Digite o nome do restaurante: \n")
+    restaurantes.append(nome_restaurante)
+    input("Digite qualquer tecla para voltar ao menu principal: ")
+    main()
+
+
 def finalizando_app():
     os.system("cls")
     print("Encerrando o programa\n")
@@ -31,7 +41,7 @@ def escolher_opcao():
 
     try:
         if opcao_escolhida == 1:
-            print("Cadastrar restaurante")
+            adicionar_restaurante()
         elif opcao_escolhida == 2:
             print("Listar restaurantes")
         elif opcao_escolhida == 3:
