@@ -11,7 +11,9 @@ def exibir_nome_do_programa():
     ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░  
     """)
 
-restaurantes = ['Feijão de corda','Sukiya', 'Baixinho']
+restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False}, 
+                {'nome':'Pizza Suprema', 'categoria':'Pizza', 'ativo':True},
+                {'nome':'Cantina', 'categoria':'Italiano', 'ativo':False}]
 
 def exibir_opcoes():
     print('1. Cadastrar restaurante')
@@ -32,7 +34,10 @@ def listar_restaurantes():
     print("Restaurantes cadastrados\n")
 
     for restaurante in restaurantes:
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        categoria_restaurante = restaurante['categoria']
+        situacao_restaurante = restaurante['ativo']
+        print(f'- {nome_restaurante} | {categoria_restaurante} | {situacao_restaurante}')
     
     input("\n Digite qualquer tecla para voltar ao menu principal: ")
     main()
@@ -44,6 +49,7 @@ def finalizando_app():
 def opcao_invalida():
     print("Opção inválida\n")
     input("Digite uma tecla para voltar ao menu principal")
+    main()
 
 def escolher_opcao():
     opcao_escolhida = int(input('Escolha uma opção: \n'))
