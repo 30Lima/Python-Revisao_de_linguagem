@@ -24,8 +24,11 @@ def exibir_opcoes():
 def adicionar_restaurante():
     os.system("cls")
     print("Cadastro de novos restaurantes\n")
-    nome_restaurante = input("Digite o nome do restaurante: \n")
-    restaurantes.append(nome_restaurante)
+    nome_restaurante = input("Digite o nome do restaurante que deseja cadastrar : ")
+    categoria = input(f"Digite a categoria do restaurante {nome_restaurante} : ")
+    print("Restaurante cadastrado com Sucesso!")
+    dados_restaurante = {'nome':{nome_restaurante}, 'categoria':{categoria}, 'ativo':False}
+    restaurantes.append(dados_restaurante)
     input("\nDigite qualquer tecla para voltar ao menu principal: ")
     main()
 
