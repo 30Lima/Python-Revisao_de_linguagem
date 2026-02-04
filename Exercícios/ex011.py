@@ -26,5 +26,3 @@ try:
        print(f"A média dos números é: {resultado}")
 except:
        print("Não é possível fazer a divisão por zero.")
-        
-
